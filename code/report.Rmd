@@ -1,0 +1,45 @@
+---
+title: "Final Project"
+author: "Ify Nwosu"
+date: "`r format(Sys.Date(), '%b-%d-%Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    highlight: haddock
+---
+
+```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
+here::i_am("code/report.Rmd")
+
+# set chunk options
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+# Introduction 
+
+The dataset used in this report is the Pediatrics Bone Marrow Transplant dataset from UCI ML Repository. It describes the characteristics and recurrence/survival outcomes of children with hematologic diseases who received healthy blood-forming stem cells from donors other than human leukocyte antigen (HLA) matched siblings. The objective of this report is to study the odds of disease relapse based on donor age, recipient age, HLA mismatch, disease, and CD3+ cell (mature T-cells) to CD34+ cell (hematopoietic stem cells) ratio.
+
+# Figure
+
+This density plot shows the distribution of recipient age within each disease group: acute lymphoblastic leukemia (ALL), acute myeloid leukemia, chronic myeloid leukemia or myelodysplastic syndrome, lymphoma, and other non-malignant hematologic cases. The mean age of each group is indicated with a dashed lined.
+
+```{r, figure, fig.align="center", out.width="600px"}
+# load figure
+knitr::include_graphics(
+  here::here("output/densityplot.png")
+)
+```
+
+# Tabular Analysis
+
+Here, we run the logistic regression model to find that disease plays a statistically significant role in relapse. We find that the odds of relapse among individuals who have lymphoma are 5.46 times higher than the odds of those who have acute lymphoblastic leukemia (ALL).
+
+```{r, regression-table}
+# load regression table
+regression_table <- readRDS(file = here::here("output/logistic_reg_table.rds"))
+
+regression_table
+```
