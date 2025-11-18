@@ -5,7 +5,9 @@ This report is the study of the odds of disease relapse of patients in the Pedia
 ## Build Report
 
 `Makefile`
-- run makefile to build final report
+- navigate to directory where project is open 
+- run "make install" in terminal to synchronize package repository 
+- run "make" in the terminal to build final report
 
 # Code Description 
 

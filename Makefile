@@ -15,3 +15,7 @@ output/logistic_reg_table.rds: code/02_make_table.R data/data_clean.rds
 clean:
 	rm -f data/*.rds && rm -f output/*.rds && rm -f output/*.png \
 	 && rm -f *.html && rm -f reports/*.html
+	 
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
