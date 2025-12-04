@@ -23,6 +23,10 @@ install:
 	Rscript -e "renv::restore(prompt = FALSE)"
 	
 # docker associated rules which run on local machine
+.PHONY: build_image
+build_image:
+	docker build -t final_image .
+	
 .PHONY: final_report
 final_report: 
 	docker run -v "/$$(pwd)"/reports:/home/rstudio/final_project/reports feyinator/final_image
