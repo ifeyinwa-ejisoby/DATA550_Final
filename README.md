@@ -2,12 +2,12 @@
 
 This report is the study of the odds of disease relapse of patients in the Pediatrics Bone Marrow Transplant from the UCI ML Repository.
 
-## Build Report
+## Build Report Using Docker
 
 `Makefile`
 - navigate to directory where project is open 
-- run "make install" in terminal to synchronize package repository 
-- run "make" in the terminal to build final report
+- have no fear, the docker image is already built here: https://hub.docker.com/repository/docker/feyinator/final_image/general
+- run "make final_report" into the terminal to run the docker image and build the final report; the final report will be located in the `reports/` folder of your local machine's project directory
 
 # Code Description 
 

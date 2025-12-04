@@ -1,6 +1,6 @@
 # load rmarkdown
 library(rmarkdown)
-pandoc::pandoc_activate("3.1.11")
+pandoc::pandoc_activate("latest")
 here::i_am("code/03_render_report.R")
 
 # render report

@@ -1,5 +1,8 @@
 # load library
 library(gtsummary)
+library(broom.helpers)
+library(car)
+library(parameters)
 
 # load data
 here::i_am("code/02_make_table.R")
