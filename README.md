@@ -4,10 +4,11 @@ This report is the study of the odds of disease relapse of patients in the Pedia
 
 ## Build Report Using Docker
 
+- ensure docker application is running
 - in the terminal, navigate to directory where project is open 
 
 `To build the docker image (optional)`
-- have no fear, the docker image is already built here: https://hub.docker.com/repository/docker/feyinator/final_image/general
+- have no fear, the docker image is already built here: https://hub.docker.com/r/feyinator/final_image
 - however, if you'd like to build it yourself, type "make build_image" into the terminal
 
 `To run the docker container and build the report`
